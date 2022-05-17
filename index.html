@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title> Solar System </title>
+
+	<script src="https://threejs.org/build/three.js"></script>
+	
+	
+</head>
+
+<body>
+	<script type="module" src="scene.js" defer></script>
+	<div>
+		<input type="checkbox" class="my-checkbox" id="my-checkbox" value="1" />
+		Show/Hide Planet Orbits
+	</div>	  
+	<style>
+		.my-checkbox {
+			transform: scale(2);
+			margin-right: 11px;
+		}		
+		.my-checkbox:checked {
+			background-color: green;
+		}
+
+		body {
+			font-size: 1.2em;
+    		font-family: arial;
+			margin: 0px;
+			overflow: hidden;
+		}
+	</style>
+</body>
+
+</html>
