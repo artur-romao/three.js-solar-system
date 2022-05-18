@@ -15,19 +15,37 @@
 
 <body>
 	<script type="module" src="scene.js" defer></script>
-	<div>
+	<div class="my-div">
 		<input type="checkbox" class="my-checkbox" id="my-checkbox" value="1" />
-		Show/Hide Planet Orbits
+		Hide Planet Orbits
+	</div>
+	<div class="showInfo-div" id="showInfo-div">
+		<p id="name"></p>
+		<p id="diameter"></p>
+		<p id="dayTime"></p>
+		<p id="orbitalPeriod"></p>
+		<p id="temperature"></p>
 	</div>	  
 	<style>
+		.showInfo-div {
+			position: fixed;
+			right: 0px;
+			top: 250px;
+			width: 250px;
+			color: #ffffff;
+			display: none;
+		}
+		.my-div {
+			position: fixed;
+			right: 0px;
+			top: 10px;
+			width: 200px;
+			color: #ffffff;
+		}
 		.my-checkbox {
 			transform: scale(2);
 			margin-right: 11px;
 		}		
-		.my-checkbox:checked {
-			background-color: green;
-		}
-
 		body {
 			font-size: 1.2em;
     		font-family: arial;

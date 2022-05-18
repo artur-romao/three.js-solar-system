@@ -1,11 +1,12 @@
 export default class Planet {
-    constructor(radius, positionX, textureFile, dayTime, orbitalPeriod, temperature) {
+    constructor(radius, positionX, textureFile, dayTime, orbitalPeriod, temperature, diameter) {
       this.radius = radius;
       this.positionX = positionX;
       this.textureFile = textureFile;
       this.dayTime = dayTime;
       this.orbitalPeriod = orbitalPeriod;
       this.temperature = temperature;
+      this.diameter = diameter;
     }
   
     getMesh() {
@@ -15,6 +16,11 @@ export default class Planet {
         const material = new THREE.MeshStandardMaterial({ map: texture });
         this.mesh = new THREE.Mesh(geometry, material);
         this.mesh.position.x += this.positionX;
+        this.mesh.dayTime = this.dayTime;
+        this.mesh.orbitalPeriod = this.orbitalPeriod;
+        this.mesh.temperature = this.temperature;
+        this.mesh.diameter = this.diameter;
+        this.mesh.name = this.textureFile.replace("./img/", "").replace(".jpg", "").replace(".jpeg", "").replace(".png", "").toUpperCase();
       }
       return this.mesh;
     }
